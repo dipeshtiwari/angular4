@@ -1,4 +1,4 @@
-<form novalidate [formGroup]="loginForm" class="form-signin">
+<form novalidate [formGroup]="loginForm" class="form-signin" (ngSubmit)="login(loginForm)">
     <h1 class=" h3 mb-3 font-weight-normal">Please sign in</h1>
 
     <p *ngIf="loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched" class="error">Email is required.</p>

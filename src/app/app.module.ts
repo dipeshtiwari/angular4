@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule, Routes } from '@angular/router';
+
+// Providers
+import { AuthenticationService } from './_providers/authentication.service';
 
 // Compnents
 import { AppComponent } from './app.component';
@@ -23,10 +28,11 @@ import { Routing } from './app.routes';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    Routing
+    Routing,
+    HttpModule,
 
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
