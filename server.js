@@ -2,12 +2,10 @@
 const express = require('express');
 const app = express();
 var path = require('path');
-var bodyParser = require('body-parser'); // pull information from HTML POST (express4)
-var cors = require('cors');
-var fs = require('fs');
+
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/hello', function(req, res) {
     res.send('hello');
