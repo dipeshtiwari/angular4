@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { NgForm } from '@angular/forms/src/directives/ng_form';
 
 import { AuthenticationService } from '../_providers/authentication.service';
 
@@ -32,10 +31,9 @@ export class LoginComponent implements OnInit {
   }
 
   // User login
-  login(F: NgForm) {
+  login(value) {
     // this.loading = true;
-    debugger;
-    this.authenticationService.login(F.value)
+    this.authenticationService.login(value)
       .subscribe(
       data => {
         console.log(data);
