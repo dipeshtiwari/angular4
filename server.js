@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 var path = require('path');
 var bodyParser = require('body-parser'); // pull information from HTML POST (express4)
-var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 var cors = require('cors');
 var fs = require('fs');
 
