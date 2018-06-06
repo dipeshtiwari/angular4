@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     public formBuilder: FormBuilder,
     public authenticationService: AuthenticationService
   ) {
-
+    this.returnUrl = 'dashboard';
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
@@ -31,9 +31,9 @@ export class LoginComponent implements OnInit {
   }
 
   // User login
-  login(value) {
+  login(loginForm) {
     // this.loading = true;
-    this.authenticationService.login(value)
+    this.authenticationService.login(loginForm)
       .subscribe(
       data => {
         console.log(data);

@@ -6,11 +6,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Providers
 import { AuthenticationService } from './_providers/authentication.service';
+import { UsersService } from './_providers/users.service';
 
 // Compnents
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PageComponent } from './page/page.component';
+import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { UsersComponent } from './page/users/users.component';
 import { HeaderComponent } from './page/header/header.component';
 import { FooterComponent } from './page/footer/footer.component';
 import { Routing } from './app.routes';
@@ -22,7 +25,9 @@ import { Routing } from './app.routes';
     LoginComponent,
     PageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,7 @@ import { Routing } from './app.routes';
     HttpModule,
 
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService,UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

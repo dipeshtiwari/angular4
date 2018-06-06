@@ -9,9 +9,11 @@ import { ApiEndpoint } from '../_helpers/apiEndpoint';
 export class AuthenticationService {
     constructor(private http: Http) { }
 
-    login(value: any) {
-        console.log(value);
-        return this.http.post(ApiEndpoint.LOGIN, value)
+    login(loginForm: any) {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        const data = JSON.stringify({ 'email': loginForm.value.email, 'password': loginForm.value.password });
+        return this.http.post(ApiEndpoint.LOGIN, data, {headers : headers})
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 const user = response.json();
