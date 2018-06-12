@@ -29,7 +29,7 @@ app.get('/api/test', function(request, response) {
 });
 
 //common routes for multiple routes
-app.use('/api', require('./node-api/app/routes/routes.js'));
+//app.use('/api', require('./node-api/app/routes/routes.js'));
 
 // Start the app by listening on the default Heroku port
 
