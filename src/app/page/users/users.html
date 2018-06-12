@@ -1,3 +1,5 @@
+<button (click)="createUser()"></button>
+
 <table class="table">
     <thead>
         <tr>
@@ -14,7 +16,7 @@
             <td>{{ user.lastName }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.email }}</td>
-            <td><a [routerLink]="['/admin/user/', 'edit', user._id]" class="icon-edit"> Edit</a> <a class="icon-remove" (click)=deletUser(user._id) style="margin-left:10%;">Delete</a></td>>
+            <td><a [routerLink]="['/admin/user/', 'edit', user._id]" class="icon-edit"> Edit</a> <a class="icon-remove" (click)="deletUser(user._id)" style="margin-left:10%;">Delete</a></td>
         </tr>
     </tbody>
 </table>

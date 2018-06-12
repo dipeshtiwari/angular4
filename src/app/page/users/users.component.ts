@@ -24,7 +24,7 @@ export class UsersComponent implements OnInit {
   startLoadingSpinner() {
     // this.ng4LoadingSpinnerService.show();
     setTimeout(function() {
-      this.ng4LoadingSpinnerService.hide();
+      // this.ng4LoadingSpinnerService.hide();
     }.bind(this), 4000);
   }
 
@@ -39,8 +39,11 @@ export class UsersComponent implements OnInit {
       });
   }
 
-  deletUser(userId: string) {
+  createUser(){
+    
+  }
 
+  deletUser(userId: string) {
     this.userService.delete(userId)
     .subscribe(
       data => {

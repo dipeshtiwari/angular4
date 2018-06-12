@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageComponent } from './page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
+import { UsersCreateComponent } from './users/create/users.create.component';
 
 export const PageRoutes: Routes = [
     {
@@ -20,4 +21,11 @@ export const PageRoutes: Routes = [
             { path: '', component: UsersComponent }
         ]
     },
+    {
+        path: 'users/create',
+        component: PageComponent,
+        children: [
+            { path: '', component: UsersCreateComponent }
+        ]
+    }
 ];
