@@ -12,7 +12,7 @@ var config = require('./node-api/config/app.config');
 //db config file
 var database = require('./node-api/config/database');
 
-var fileUpload = require('./node-api/app/helper/fileupload');
+//var fileUpload = require('./node-api/app/helper/fileupload');
 
 //set portnumber ot listen
 app.set('port', (process.env.PORT || config.port));
