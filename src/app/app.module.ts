@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { PageComponent } from './page/page.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
 import { UsersComponent } from './page/users/users.component';
+import { UsersCreateComponent } from './page/users/create/users.create.component';
 import { HeaderComponent } from './page/header/header.component';
 import { FooterComponent } from './page/footer/footer.component';
 import { Routing } from './app.routes';
@@ -27,7 +28,8 @@ import { Routing } from './app.routes';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    UsersComponent
+    UsersComponent,
+    UsersCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { Routing } from './app.routes';
     HttpModule,
 
   ],
-  providers: [AuthenticationService,UsersService],
+  providers: [AuthenticationService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
