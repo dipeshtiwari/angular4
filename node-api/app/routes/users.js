@@ -1,6 +1,3 @@
-var multer = require('multer')
-var upload = multer({ dest: 'uploads/' })
-
 // load the User model
 var Users = require('../controllers/users');
 // expose the routes to our app with module.exports
@@ -20,11 +17,4 @@ module.exports = function(app) {
 
     // User login
     app.post('/user/login', Users.login);
-
-    // app.post('/user/image', upload.single('avatar'), function(req, res) {
-    //     console.log('req', req.file);
-    //     res.json({
-    //         message: "file uploaded"
-    //     });
-    // });
 };
