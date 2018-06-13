@@ -4,7 +4,7 @@ var Users = require('../models/users');
 
 //User login
 exports.login = function(req, res, next) {
-    Users.findOne({ 'email': req.body.username }, 'password', function(err, user) {
+    Users.findOne({ 'email': req.body.email }, 'password', function(err, user) {
         const payload = {
             user: user._id
         };

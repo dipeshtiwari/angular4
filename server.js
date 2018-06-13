@@ -1,12 +1,13 @@
 //Install express server
 const express = require('express');
 const app = express();
+var cors = require('cors')
 var bodyParser = require('body-parser');
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json()); // parse application/vnd.api+json as json
-
+app.use(cors()); //handle for cross-origin-resource-sharing
 //app config file
 var config = require('./node-api/config/app.config');
 //db config file

@@ -1,6 +1,7 @@
 // Api base url
 // const BaseUrl = 'https://calm-taiga-40248.herokuapp.com/api/';
- const BaseUrl = '/api/';
+const BaseUrl = '/api/';
+// const BaseUrl = 'http://localhost:1010/api/';
 
 export const ApiEndpoint = {
   LOGIN: BaseUrl + 'user/login',
