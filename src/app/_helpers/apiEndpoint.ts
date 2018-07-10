@@ -1,11 +1,13 @@
+import {environment} from '../../environments/environment';
+
 // Api base url
-// const BaseUrl = 'https://calm-taiga-40248.herokuapp.com/api/';
-const BaseUrl = '/api/';
-// const BaseUrl = 'http://localhost:1010/api/';
+// const serverUrl = 'https://calm-taiga-40248.herokuapp.com/api/';
+// const serverUrl = '/api/';
+// const serverUrl = 'http://localhost:1010/api/';
 
 export const ApiEndpoint = {
-  LOGIN: BaseUrl + 'user/login',
-  GETALLUSER: BaseUrl + 'user/getAll',
-  CREATEUSER: BaseUrl + 'user/create',
-  DELETEUSER: BaseUrl + 'user/'
+  LOGIN: environment.serverUrl + 'user/login',
+  GETALLUSER: environment.serverUrl + 'user/getAll',
+  CREATEUSER: environment.serverUrl + 'user/create',
+  DELETEUSER: environment.serverUrl + 'user/'
 };

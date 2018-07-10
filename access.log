@@ -1,0 +1,4 @@
+::1 - - [04/Jul/2018:06:36:26 +0000] "OPTIONS /api/user/login HTTP/1.1" 204 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+::1 - - [04/Jul/2018:06:36:27 +0000] "POST /api/user/login HTTP/1.1" 200 228 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+::1 - - [10/Jul/2018:11:10:16 +0000] "OPTIONS /api/user/login HTTP/1.1" 204 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+::1 - - [10/Jul/2018:11:10:17 +0000] "POST /api/user/login HTTP/1.1" 200 228 "http://localhost:4200/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"

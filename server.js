@@ -1,10 +1,21 @@
 //Install express server
 const express = require('express');
 const app = express();
+var fs = require('fs');
+var path = require('path');
 var cors = require('cors')
+var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-// Serve only the static files form the dist directory
+//console the log on development serve 
+app.use(logger('dev'));
+
+// create a write stream (in append mode)
+var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+
+// setup the logger
+app.use(logger('combined', { stream: accessLogStream }))
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json()); // parse application/vnd.api+json as json
 app.use(cors()); //handle for cross-origin-resource-sharing
